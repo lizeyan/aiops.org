@@ -35,14 +35,17 @@
         .program-main-entry {
             background: #9A0000;
             color: #FFFFFF;
-            padding-top: 3px;
+            padding-top: 0;
             padding-bottom: 0;
-            border-color: #FFFFFF;
+            /*margin-top: 1px;*/
+            border-top-color: #FFFFFF;
+            border-bottom-color: #FFFFFF;
         }
 
         .program-entry {
             padding-top: 1px;
             padding-bottom: 1px;
+            border-color: #aaaaaa;
         }
     </style>
 </head>
@@ -416,7 +419,7 @@
                 <a href="#" class="list-group-item list-group-item-action program-entry" data-toggle="collapse"
                    data-target="#jiang" aria-expanded="false" aria-controls="jiang">
                     <b>TBD</b><br/>
-                    Junchen Jiang, UChicago, Google Faculty Research Award, ACM Dissertation Award
+                    Junchen Jiang, Assistant Professor of Computer Science at University of Chicago
                 </a>
                 <div id="jiang" class="collapse list-group-item program-detail">
                 <p><img src="https://people.cs.uchicago.edu/~junchenj/photo_small.png" class="avatar">
@@ -848,7 +851,9 @@ Please submit your paper via <a href='https://hdr-nets19.hotcrp.com'>https://hdr
     var eles = $(".program-detail");
     for (i = 0; i < eles.length; i += 1)
     {
-        $('<span>&nbsp&nbsp<i class="fas fa-angle-double-down" id="' + eles[i].id + "-indicator" + '"></i></span>').insertAfter(
+        $('<span>' +
+            '&nbsp&nbsp<i class="fas fa-angle-double-down" style="color: #AA0000;" id="' + eles[i].id + "-indicator" + '"></i>' +
+            '</span>').insertAfter(
             $(eles[i]).prev().children('b')
         );
     }
